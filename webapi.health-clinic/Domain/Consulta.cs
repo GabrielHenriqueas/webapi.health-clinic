@@ -17,13 +17,17 @@ namespace webapi.health_clinic.Domain
         [Required(ErrorMessage = "Descrição da Consulta é obrigatório!")]
         public string? Descricao { get; set; }
 
-        [Column(TypeName = "DATETIME")]
+        [Column(TypeName = "DATE")]
         [Required(ErrorMessage = "Data da Consulta é obrigatório!")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = @"dd/mm/yyyy")]
         public DateTime DataConsulta { get; set; }
 
-        [Column(TypeName = "DATETIME")]
+        [Column(TypeName = "TIME")]
         [Required(ErrorMessage = "Horário da Consulta é obrigatório!")]
-        public DateTime HorarioConsulta { get; set; }
+        [DataType(DataType.Time)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = @"hh\:mm")]
+        public TimeSpan? HorarioConsulta { get; set; }
 
         //=======================================================================
 

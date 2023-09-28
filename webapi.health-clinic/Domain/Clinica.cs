@@ -15,19 +15,19 @@ namespace webapi.health_clinic.Domain
 
         [Column(TypeName = "VARCHAR(30)")]
         [Required(ErrorMessage = "CNPJ é obrigatório!")]
-        public int CNPJ { get; set; }
+        public string? CNPJ { get; set; }
 
         [Column(TypeName = "VARCHAR(50)")]
         [Required(ErrorMessage = "Razão Social é obrigatório!")]
         public string? RazaoSocial { get; set; }
 
-        [Column(TypeName = "DATETIME")]
+        [Column(TypeName = "TIME")]
         [Required(ErrorMessage = "Hora de Abertura é obrigatório!")]
-        public DateTime HoraAbertura { get; set; }
+        public TimeSpan? HoraAbertura { get; set; }
 
-        [Column(TypeName = "DATETIME")]
+        [Column(TypeName = "TIME")]
         [Required(ErrorMessage = "Hora de Fechamento é obrigatório!")]
-        public DateTime HoraFechamento { get; set; }
+        public TimeSpan? HoraFechamento { get; set; }
 
         [Column(TypeName = "VARCHAR(50)")]
         [Required(ErrorMessage = "Endereço é obrigatório!")]

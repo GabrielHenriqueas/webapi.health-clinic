@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>webapi.health-clinic</name>
+    </assembly>
+    <members>
+        <member name="M:webapi.health_clinic.Controllers.ClinicaController.Post(webapi.health_clinic.Domain.Clinica)">
+            <summary>
+            CADASTRAR CLÍNICA
+            </summary>
+            <param name="clinica"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.Controllers.ClinicaController.Get">
+            <summary>
+            LISTAR CLÍNICA
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.Controllers.ClinicaController.Put(System.Guid,webapi.health_clinic.Domain.Clinica)">
+            <summary>
+            ATUALIZAR CLÍNICA
+            </summary>
+            <param name="id"></param>
+            <param name="clinica"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.Controllers.ClinicaController.Delete(System.Guid)">
+            <summary>
+            DELETAR CLÍNICA
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.Controllers.ConsultaController.Post(webapi.health_clinic.Domain.Consulta)">
+            <summary>
+            CADASTRAR CONSULTA
+            </summary>
+            <param name="consulta"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.Controllers.ConsultaController.Get">
+            <summary>
+            LISTAR CONSULTAS
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.Controllers.ConsultaController.Put(System.Guid,webapi.health_clinic.Domain.Consulta)">
+            <summary>
+            ATUALIZAR CONSULTA
+            </summary>
+            <param name="id"></param>
+            <param name="consulta"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.Controllers.ConsultaController.Delete(System.Guid)">
+            <summary>
+            DELETAR CONSULTA
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.Controllers.EspecialidadeController.Post(webapi.health_clinic.Domain.Especialidade)">
+            <summary>
+            CADASTRAR ESPECIALIDADES
+            </summary>
+            <param name="especialidade"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.Controllers.EspecialidadeController.Get">
+            <summary>
+            LISTAR ESPECIALIDADES
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.Controllers.EspecialidadeController.Delete(System.Guid)">
+            <summary>
+            DELETAR ESPECIALIDADE
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.Controllers.FeedBackController.Post(webapi.health_clinic.Domain.FeedBack)">
+            <summary>
+            CADASTRAR FEEDBACK
+            </summary>
+            <param name="feedBack"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.Controllers.FeedBackController.Get">
+            <summary>
+            LISTAR FEEDBACKS
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.Controllers.MedicoController.Post(webapi.health_clinic.Domain.Medico)">
+            <summary>
+            CADASTRAR MÉDICO
+            </summary>
+            <param name="medico"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.Controllers.MedicoController.Get">
+            <summary>
+            LISTAR MÉDICOS
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.Controllers.MedicoController.Put(System.Guid,webapi.health_clinic.Domain.Medico)">
+            <summary>
+            ATUALIZAR MÉDICO
+            </summary>
+            <param name="id"></param>
+            <param name="medico"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.Controllers.MedicoController.Delete(System.Guid)">
+            <summary>
+            DELETAR MÉDICO
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.Controllers.PacienteController.Post(webapi.health_clinic.Domain.Paciente)">
+            <summary>
+            CADASTRAR PACIENTE
+            </summary>
+            <param name="paciente"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.Controllers.PacienteController.Get">
+            <summary>
+            LISTAR PACIENTES
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.Controllers.PacienteController.Put(System.Guid,webapi.health_clinic.Domain.Paciente)">
+            <summary>
+            ATUALIZAR PACIENTES
+            </summary>
+            <param name="id"></param>
+            <param name="paciente"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.Controllers.PacienteController.Delete(System.Guid)">
+            <summary>
+            DELETAR PACIENTES
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.Controllers.TipoUsuarioController.Post(webapi.health_clinic.Domain.TipoUsuario)">
+            <summary>
+            CADASTRAR TIPO DE USUÁRIO
+            </summary>
+            <param name="tipoUsuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.Controllers.TipoUsuarioController.Get">
+            <summary>
+            LISTAR TIPO DE USUÁRIO
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.Controllers.TipoUsuarioController.Delete(System.Guid)">
+            <summary>
+            DELETAR TIPO DE USUÁRIO
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.Controllers.UsuarioController.Post(webapi.health_clinic.Domain.Usuario)">
+            <summary>
+            CADASTRAR USUÁRIO
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.Controllers.UsuarioController.Get">
+            <summary>
+            LISTAR USUÁRIOS
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.Controllers.UsuarioController.Put(System.Guid,webapi.health_clinic.Domain.Usuario)">
+            <summary>
+            ATUALIZAR USUÁRIO
+            </summary>
+            <param name="id"></param>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.health_clinic.Controllers.UsuarioController.Delete(System.Guid)">
+            <summary>
+            DELETAR USUÁRIO
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:webapi.health_clinic.Migrations.BD_v1">
+            <inheritdoc />
+        </member>
+        <member name="M:webapi.health_clinic.Migrations.BD_v1.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:webapi.health_clinic.Migrations.BD_v1.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:webapi.health_clinic.Migrations.BD_v1.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:webapi.health_clinic.Utils.Criptografia.GeraHash(System.String)">
+            <summary>
+            Gera uma Hash a partir de uma senha
+            </summary>
+            <param name="senha">Senha que receberá a hash</param>
+            <returns>Senha Criptografada com a hash</returns>
+        </member>
+        <member name="M:webapi.health_clinic.Utils.Criptografia.CompararHash(System.String,System.String)">
+            <summary>
+            Verifica se a hash da senha informada é igual á hash salva do bd
+            </summary>
+            <param name="senhaForm">Senha passada no form de Login</param>
+            <param name="senhaBanco">Senha cadastrada no banco</param>
+            <returns>True or False</returns>
+        </member>
+    </members>
+</doc>
