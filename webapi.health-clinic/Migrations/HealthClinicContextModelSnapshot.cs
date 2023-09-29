@@ -36,11 +36,11 @@ namespace webapi.health_clinic.Migrations
                         .IsRequired()
                         .HasColumnType("VARCHAR(50)");
 
-                    b.Property<DateTime>("HoraAbertura")
-                        .HasColumnType("DATETIME");
+                    b.Property<TimeSpan>("HoraAbertura")
+                        .HasColumnType("TIME");
 
-                    b.Property<DateTime>("HoraFechamento")
-                        .HasColumnType("DATETIME");
+                    b.Property<TimeSpan>("HoraFechamento")
+                        .HasColumnType("TIME");
 
                     b.Property<string>("NomeFantasia")
                         .IsRequired()
@@ -62,14 +62,14 @@ namespace webapi.health_clinic.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("DataConsulta")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("DATE");
 
                     b.Property<string>("Descricao")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("HorarioConsulta")
-                        .HasColumnType("DATETIME");
+                    b.Property<TimeSpan>("HoraConsulta")
+                        .HasColumnType("TIME");
 
                     b.Property<Guid>("IdMedico")
                         .HasColumnType("uniqueidentifier");
@@ -263,13 +263,13 @@ namespace webapi.health_clinic.Migrations
                     b.HasOne("webapi.health_clinic.Domain.Medico", "Medico")
                         .WithMany()
                         .HasForeignKey("IdMedico")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("webapi.health_clinic.Domain.Paciente", "Paciente")
                         .WithMany()
                         .HasForeignKey("IdPaciente")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Medico");
@@ -282,7 +282,7 @@ namespace webapi.health_clinic.Migrations
                     b.HasOne("webapi.health_clinic.Domain.Consulta", "Consulta")
                         .WithMany()
                         .HasForeignKey("IdConsulta")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Consulta");
@@ -293,19 +293,19 @@ namespace webapi.health_clinic.Migrations
                     b.HasOne("webapi.health_clinic.Domain.Clinica", "Clinica")
                         .WithMany()
                         .HasForeignKey("IdClinica")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("webapi.health_clinic.Domain.Especialidade", "Especialidade")
                         .WithMany()
                         .HasForeignKey("IdEspecialidade")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("webapi.health_clinic.Domain.Usuario", "Usuario")
                         .WithMany()
                         .HasForeignKey("IdUsuario")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Clinica");
@@ -320,7 +320,7 @@ namespace webapi.health_clinic.Migrations
                     b.HasOne("webapi.health_clinic.Domain.Usuario", "Usuario")
                         .WithMany()
                         .HasForeignKey("IdUsuario")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Usuario");
@@ -331,7 +331,7 @@ namespace webapi.health_clinic.Migrations
                     b.HasOne("webapi.health_clinic.Domain.TipoUsuario", "TipoUsuario")
                         .WithMany()
                         .HasForeignKey("IdTipoUsuario")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("TipoUsuario");

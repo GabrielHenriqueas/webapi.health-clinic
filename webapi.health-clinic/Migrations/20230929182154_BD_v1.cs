@@ -19,8 +19,8 @@ namespace webapi.health_clinic.Migrations
                     NomeFantasia = table.Column<string>(type: "VARCHAR(50)", nullable: false),
                     CNPJ = table.Column<string>(type: "VARCHAR(30)", nullable: false),
                     RazaoSocial = table.Column<string>(type: "VARCHAR(50)", nullable: false),
-                    HoraAbertura = table.Column<DateTime>(type: "DATETIME", nullable: false),
-                    HoraFechamento = table.Column<DateTime>(type: "DATETIME", nullable: false),
+                    HoraAbertura = table.Column<TimeSpan>(type: "TIME", nullable: false),
+                    HoraFechamento = table.Column<TimeSpan>(type: "TIME", nullable: false),
                     Endereco = table.Column<string>(type: "VARCHAR(50)", nullable: false)
                 },
                 constraints: table =>
@@ -138,8 +138,8 @@ namespace webapi.health_clinic.Migrations
                     IdConsulta = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Situacao = table.Column<bool>(type: "BIT", nullable: false),
                     Descricao = table.Column<string>(type: "TEXT", nullable: false),
-                    DataConsulta = table.Column<DateTime>(type: "DATETIME", nullable: false),
-                    HorarioConsulta = table.Column<DateTime>(type: "DATETIME", nullable: false),
+                    DataConsulta = table.Column<DateTime>(type: "DATE", nullable: false),
+                    HoraConsulta = table.Column<TimeSpan>(type: "TIME", nullable: false),
                     IdPaciente = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     IdMedico = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },

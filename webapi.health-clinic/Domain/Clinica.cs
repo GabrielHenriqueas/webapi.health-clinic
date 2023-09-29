@@ -23,11 +23,11 @@ namespace webapi.health_clinic.Domain
 
         [Column(TypeName = "TIME")]
         [Required(ErrorMessage = "Hora de Abertura é obrigatório!")]
-        public TimeSpan? HoraAbertura { get; set; }
+        public TimeSpan HoraAbertura { get; set; }
 
         [Column(TypeName = "TIME")]
         [Required(ErrorMessage = "Hora de Fechamento é obrigatório!")]
-        public TimeSpan? HoraFechamento { get; set; }
+        public TimeSpan HoraFechamento { get; set; }
 
         [Column(TypeName = "VARCHAR(50)")]
         [Required(ErrorMessage = "Endereço é obrigatório!")]

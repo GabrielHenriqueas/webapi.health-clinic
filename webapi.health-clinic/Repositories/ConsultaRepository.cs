@@ -24,7 +24,7 @@ namespace webapi.health_clinic.Repositories
                 consultaBuscada.Situacao = consulta.Situacao;
                 consultaBuscada.Descricao = consulta.Descricao;
                 consultaBuscada.DataConsulta = consulta.DataConsulta;
-                consultaBuscada.HorarioConsulta = consulta.HorarioConsulta;
+                consultaBuscada.HoraConsulta = consulta.HoraConsulta;
                 
             }
 

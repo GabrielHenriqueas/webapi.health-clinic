@@ -24,7 +24,7 @@ namespace webapi.health_clinic.Repositories
             {
                 usuarioBuscado.Nome = usuario.Nome;
                 usuarioBuscado.Email = usuario.Email;
-                usuarioBuscado.Senha = usuario.Senha;
+                usuarioBuscado.Senha = Criptografia.GeraHash(usuario.Senha!);
                 usuarioBuscado.TipoUsuario = usuario.TipoUsuario;
             }
 
@@ -35,7 +35,7 @@ namespace webapi.health_clinic.Repositories
 
         //==================================================================
 
-        public Usuario BuscarPorEmailESenha(string email, string senha)
+        public Usuario? BuscarPorEmailESenha(string email, string senha)
         {
             Usuario usuarioBuscado = ctx.Usuario
                 .Select(u => new Usuario

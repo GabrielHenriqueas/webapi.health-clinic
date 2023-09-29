@@ -12,7 +12,7 @@ using webapi.health_clinic.Contexts;
 namespace webapi.health_clinic.Migrations
 {
     [DbContext(typeof(HealthClinicContext))]
-    [Migration("20230926201437_BD_v1")]
+    [Migration("20230929182154_BD_v1")]
     partial class BD_v1
     {
         /// <inheritdoc />
@@ -39,11 +39,11 @@ namespace webapi.health_clinic.Migrations
                         .IsRequired()
                         .HasColumnType("VARCHAR(50)");
 
-                    b.Property<DateTime>("HoraAbertura")
-                        .HasColumnType("DATETIME");
+                    b.Property<TimeSpan>("HoraAbertura")
+                        .HasColumnType("TIME");
 
-                    b.Property<DateTime>("HoraFechamento")
-                        .HasColumnType("DATETIME");
+                    b.Property<TimeSpan>("HoraFechamento")
+                        .HasColumnType("TIME");
 
                     b.Property<string>("NomeFantasia")
                         .IsRequired()
@@ -65,14 +65,14 @@ namespace webapi.health_clinic.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("DataConsulta")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("DATE");
 
                     b.Property<string>("Descricao")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("HorarioConsulta")
-                        .HasColumnType("DATETIME");
+                    b.Property<TimeSpan>("HoraConsulta")
+                        .HasColumnType("TIME");
 
                     b.Property<Guid>("IdMedico")
                         .HasColumnType("uniqueidentifier");
