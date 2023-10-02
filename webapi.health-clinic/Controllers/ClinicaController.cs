@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using webapi.health_clinic.Domain;
 using webapi.health_clinic.Interfaces;
@@ -26,7 +27,7 @@ namespace webapi.health_clinic.Controllers
         /// </summary>
         /// <param name="clinica"></param>
         /// <returns></returns>
-        [HttpPost]
+        [HttpPost("Cadastrar")]
         public IActionResult Post(Clinica clinica)
         {
             try
@@ -49,6 +50,7 @@ namespace webapi.health_clinic.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
+        //[Authorize(Roles = "Administrador")]
         public IActionResult Get()
         {
             try

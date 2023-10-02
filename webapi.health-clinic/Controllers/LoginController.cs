@@ -50,7 +50,7 @@ namespace webapi.health_clinic.Controllers
                 };
 
                 //2 - Definir a chave de acesso ao token
-                var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("projeto-event-webapi-chave-autenticacao"));
+                var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("projeto-webapi-health-clinic-chave-autenticacao"));
 
                 //3 - Definir as credenciais do token (Header)
                 var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
@@ -59,10 +59,10 @@ namespace webapi.health_clinic.Controllers
                 var token = new JwtSecurityToken
                 (
                     //emissor do token
-                    issuer: "webapi.event+",
+                    issuer: "webapi.health-clinic",
 
                     //destinatario
-                    audience: "webapi.event+",
+                    audience: "webapi.health-clinic",
 
                     //dados definidos na claims (Payload)
                     claims: claims,
